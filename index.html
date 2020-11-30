@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+    <nav>
+        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+            <a class="nav-item nav-link active bg-warning" id="nav-home-tab" data-toggle="tab" href="#nav-home"
+                role="tab" aria-controls="nav-home" aria-selected="true">Home</a>
+            <a class="nav-item nav-link bg-success text-white" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab"
+                aria-controls="nav-profile" aria-selected="false">Vuelos</a>
+        </div>
+    </nav>
+    <form>
+        <div class="tab-content bg-warning" id="nav-tabContent">
+            <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                <div class="container">
+                    <div class="row">
+                        <div class="col bg-white m-2 text-center">
+                            <span class="destino">Destino o nombre de hotel</span>
+                            <input type="text" aria-label="Escribe tu destino" id="destino">
+                        </div>
+                        <div class="col bg-white m-2 p-2 text-center">
+                            <span class="hotel">Fecha de entrada</span>
+                            <input type="date" id="fechaActual" value="">
+                            </span>
+                        </div>
+                        <div class="col m-2 text-center bg-white">
+                            <span class="noches">Noches</span>
+                            <select id="noches" name="cars">
+                                <optgroup label="COMUNES" id="popular">
+                                <optgroup label="DIARIAS" id="daily">
+                            </select>
+                        </div>
+                        <div class="dropdown m-2 text-center">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Dropdown
+                            </button>
+                            <div class="dropdown-menu" id="drop">
+                                <div class="row">
+                                    <div class="col" id="paclonar">
+                                        <div class="row">
+                                            <div class="col" id="columhab"></div>
+                                            <div class="col" id="edades"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dropdown-menu text-center" id="drop">
+                                <div class="row">
+                                    <div class="col" id="paclonar">
+                                        <div class="row">
+                                            <div class="col" id="columhab"></div>
+                                            <div class="col" id="edades"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <input class="bg-primary m-3" type="button" value="Resultado">
+                    </div>
+                </div>
+                <div id="resultados"></div>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">...</div>
+        </div>
+    </form>
+    <script src="script/functions.js"></script>
+    <script src="script/script.js"></script>
+    
+
+    <!--Para evitar que se cierre el dropdown al hacer click en algo-->
+    <script>
+        $('.dropdown-menu').click(function (e) {
+            e.stopPropagation();
+        })
+    </script>
+</body>
+
+</html>
