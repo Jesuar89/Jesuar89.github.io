@@ -15,6 +15,7 @@ window.onload = function () {
     //Desavilitar fechas anteriores
     this.document.getElementById('fechaActual').setAttribute("min", dateformat);
 }
+
 //Drop de eleccion de noches
 crearPadre("14 Noches", document.getElementById("popular"), "option");
 crearPadre("10 Noches", document.getElementById("popular"), "option");
@@ -26,8 +27,7 @@ for (let i = 30; i >= 1; i--) {
     crearPadre(i + " Noches", document.getElementById("daily"), "option");
 }  
 
-
-//FUNTIONS-----------------------------------------------------------------------------------
+//FUNCIONES-----------------------------------------------------------------------------------
 
 //Funcion para Crear un elemento en el HTML("contenido","el padre","el tipo de etiqueta")
 function crearPadre(contenido, padre, etiqueta) {
